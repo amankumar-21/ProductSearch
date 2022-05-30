@@ -61,7 +61,7 @@ public class ProductControllerTest {
 	   }
 	
 	 @Test
-	   public void testAddEmployee() throws Exception {
+	   public void testAddProduct() throws Exception {
 		 Products product = getProduct();
 	      doNothing().when(productController).addProduct(product);
 	      mvc.perform(post("/product/").content(asJson(product)).contentType(APPLICATION_JSON))
