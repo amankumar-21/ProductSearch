@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  margin: auto;
+  margin-top: 1%;
+ 
+  
+}
+
+.search {
+text-align: center;
+margin: auto;
+padding: 10px;
+font-size: 20px;
+width: 40%;
+
+}
+
+
+table {
+  width: auto;
+  
+  border-spacing: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+ background-color: lightgrey;
+ 
+  
+}
+
+th {
+  width: 250px;
+  text-align: center;
+  font-size: 18px;
+
+}
+
+td { 
+  width: 250px;
+  font-size: 15px;
+ text-align: center ;
+}
+
+
+
+
+
+
+
