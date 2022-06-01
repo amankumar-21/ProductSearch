@@ -18,13 +18,10 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    async () =>{
-     await axios('http://localhost:8080/products')
+    axios('http://localhost:8080/products')
       .then(response => {
         setData(response.data);;
-      })
-      
-    }
+      })    
   }, [])
 
   const searching = (productobj: productType) => {
