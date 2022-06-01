@@ -1,9 +1,16 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('It should render input element',() =>{
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const inputElement = screen.getByPlaceholderText(/Search Product Id Or Product Name/i);
+  expect(inputElement).toBeInTheDocument();
+});
+
+test('It should be able to type into input',() =>{
+  render(<App />);
+  const inputElement = screen.getByPlaceholderText(/Search Product Id Or Product Name/i);
+  fireEvent.change(inputElement, { target: { value: "iphone" } })
+  expect(inputElement.value).toBe("iphone");
 });

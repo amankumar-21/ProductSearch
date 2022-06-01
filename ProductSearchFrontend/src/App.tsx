@@ -18,11 +18,13 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios('http://localhost:8080/products')
+    async () =>{
+     await axios('http://localhost:8080/products')
       .then(response => {
         setData(response.data);;
       })
-
+      
+    }
   }, [])
 
   const searching = (productobj: productType) => {
@@ -34,6 +36,7 @@ function App() {
       <input type="text"
         placeholder="Search Product Id Or Product Name"
         className="search"
+        value={query}
         onChange={(e) => setQuery(e.target.value.toLowerCase())}
       />
 
