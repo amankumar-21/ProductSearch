@@ -12,5 +12,5 @@ test('It should be able to type into input',() =>{
   render(<App />);
   const inputElement = screen.getByPlaceholderText(/Search Product Id Or Product Name/i);
   fireEvent.change(inputElement, { target: { value: "iphone" } })
-  expect(inputElement.value).toBe("iphone");
+  expect((inputElement as HTMLInputElement).value).toBe("iphone");
 });
